@@ -13,9 +13,8 @@ ENV VERSION "8.3.4"
 ############################################################
 # Installation
 ############################################################
-RUN apk --no-cache add bash &&\
-    apk --no-cache add curl &&\
-    apk --no-cache add lftp ca-certificates openssh bash curl
+RUN apk add bash --no-cache && \
+    apk add curl --no-cache 
     
 RUN npm install -g @angular/cli@${VERSION}
 
